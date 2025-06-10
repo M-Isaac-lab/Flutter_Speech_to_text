@@ -10,6 +10,7 @@ android { // <-- C'est le bloc 'android' principal
     compileSdk = flutter.compileSdkVersion // Utilisez flutter.compileSdkVersion par défaut
     // Ou si vous voulez spécifier une valeur fixe (comme 34), mettez-la ici:
     // compileSdk 34
+    //ndkVersion = flutter.ndkVersion
 
     ndkVersion = "27.0.12077973" // Votre ajout pour le NDK
     // Ou si vous voulez utiliser celle de Flutter :

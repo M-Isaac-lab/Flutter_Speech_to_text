@@ -5,10 +5,17 @@ plugins {
     id("dev.flutter.flutter-gradle-plugin")
 }
 
-android {
+android { // <-- C'est le bloc 'android' principal
+    // Ces lignes doivent être directement dans ce bloc 'android' principal, pas dans un autre.
+    compileSdk = flutter.compileSdkVersion // Utilisez flutter.compileSdkVersion par défaut
+    // Ou si vous voulez spécifier une valeur fixe (comme 34), mettez-la ici:
+    // compileSdk 34
+
+    ndkVersion = "27.0.12077973" // Votre ajout pour le NDK
+    // Ou si vous voulez utiliser celle de Flutter :
+    // ndkVersion = flutter.ndkVersion
+
     namespace = "com.example.flutter_speech_to_text"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
